@@ -55,3 +55,29 @@ It manages currency,double spending and all other problems.
 > Can add N no. of peers to same channel
 > Can add N no. o f groups | members to same channel
 > One peer can be into N no of channels
+
+## Chaincode(golang/python/java/javascript)
+> It is a program/smart contract
+> It will read/write ledger data
+> Operation -> the sdk sends the transaction to the peer.
+> peer executes the chain code
+> Only chaincode can interact with the Ledger.
+
+> If we have 3 peers as a part of the channel, we have to install the chaincode on every single peer.
+> ledger data is inside the peer.
+
+> step3 -> install -> instantiate
+
+### Policy
+> when we instantiate ,we need to provide the policy
+> Policy, before executing something ,every single peer needs to verify the transaction,or majority or atleast by one.
+> Every single chain code has different policy
+> we cant have a chain code without policy.
+
+## Whole Structure:
+> A peer may be part of n no. of channels
+> Every channel has separate ledger
+> Every channel has one or many chain codes
+> each chain code has different policy
+
+link : https://hyperledger-fabric.readthedocs.io/en/latest/endorsement-policies.html
