@@ -32,15 +32,16 @@ it is propagated. so the chaincode can read this data and manipulate.
 > It is the heart of the system.
 > All the peers synchronise automatically
 
-## Authoring Service
+## Ordering Service
+> It verifies the policies
 > Heart of the concensus algorithm
-> provide Author of the operation.Before commiting, Every operation must pass thru authoring service. It creates the blocks,signed and verified.
+> provide Orderer of the operation.Before commiting, Every operation must pass thru ordering service. It creates the blocks,signed and verified.
 > After that it send these blocks to the peers.
 > Then peers verify and commit to the ledger.
 > Responsible for verification,security,policy verification.
 > It is done by 
 ####Apache Kafka
-It has distributed authoring service.If one is down,others will take care.
+It has distributed ordering service.If one is down,others will take care.
 It manages currency,double spending and all other problems.
 
 ## Channels
@@ -81,3 +82,11 @@ It manages currency,double spending and all other problems.
 > each chain code has different policy
 
 link : https://hyperledger-fabric.readthedocs.io/en/latest/endorsement-policies.html
+
+# MSP(Membership Service Provider)
+> It is a set of cryptographic materials that define organisation it self.
+> Every peer need these type of certificates.
+> It tells,this peer is this part of organization and so on.
+> Only peers are the part of the MSP that can communicate each other.
+
+> Channel (public certificates)
